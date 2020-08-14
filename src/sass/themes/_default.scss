@@ -1,0 +1,599 @@
+/* GENERAL
+============================ */
+
+html,
+body {
+    font: 100% / 1.4 $secondary-font;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+body,
+select,
+input,
+textarea {
+    color: $text-color;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+        color: $secondary-color;
+    }
+
+}
+
+a,
+button,
+a img {
+    transition: all 500ms ease;
+}
+
+.link {
+    background: none !important;
+    padding: 0 !important;
+
+    &:hover {
+        text-decoration: underline !important;
+    }
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font !important;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.95rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.95rem;
+}
+
+.hero {
+    h1{
+        font-weight: 400;
+        line-height: normal;
+        .big{
+            font-size: 5rem;
+            font-weight: 500;
+        }
+    }
+}
+
+@media only screen and (max-width: 64rem) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.55rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        h1{
+            .big{
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    font-size: 65%;
+}
+
+ol {
+    list-style: decimal;
+    padding: 0;
+    margin: 0;
+    padding-left: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 0.935rem;
+    line-height: 1.4rem;
+    margin: 0 0 1.4em;
+    word-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0 0 1rem;
+}
+
+h5,
+h6 {
+    margin: 0;
+}
+
+
+h5 {
+    color: $primary-color;
+}
+
+h6 {
+    color: $c-gray-85;
+}
+
+
+em{
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+/* COVER 100% Height
+============================ */
+.cover-container {
+    height: 100%;	
+    min-height: 100%;   
+    display: block;
+  
+    .cover-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+    }
+  
+    .cover-content-height {
+      flex: 1;
+    }
+  
+    .cover-content--bottom {
+      align-items: flex-end;
+      display: flex;
+  
+    }
+  
+  
+  
+  }
+  
+  @media only screen and (min-width: 64rem) {
+  
+    .cover-container,
+    .cover-content {
+      display: flex;
+      
+      
+    }
+  }
+  
+  
+  /* BLOCK CONTAINER
+  ============================ */
+  .block-container {
+display: block;
+  
+    .block-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .block-content-height {
+      flex: 1;
+    }
+  
+    .block-content--bottom {
+      align-items: flex-end;
+      display: flex;
+  
+    }
+  
+  }
+  
+  @media only screen and (min-width: 64rem) {
+  
+    .block-container,
+    .block-content {
+      display: flex;
+    }
+  }
+  
+  
+  /* SECTION COVER
+  ============================ */
+  
+  section#cover {
+    margin-top: -90px !important;
+    padding-top: 240px;
+    margin-bottom: 50px;
+  }
+  
+  section#cover h1,
+  section#cover h2,
+  section#cover h3,
+  section#cover-wrapper h1,
+  section#cover-wrapper h2,
+  section#cover-wrapper h3 {
+    margin: 0.2em 0 0.5em;
+  }
+  
+  section#cover p,
+  section#cover ul,
+  section#cover-wrapper p,
+  section#cover-wrapper ul {
+    margin-bottom: 2em;
+  }
+  
+  
+  section#cover ul,
+  section#cover-wrapper ul {
+    list-style: outside;
+    margin-left: 1.5em;
+  }
+  
+  section#cover ol,
+  section#cover-wrapper ol {
+    list-style-type: upper-roman;
+    margin-left: 1.5em;
+  }
+  
+  
+  section#cover-wrapper ul li,
+  section#cover-wrapper ol li {
+    line-height: normal;
+    margin-bottom: .8rem;
+    margin-left: 1.5em;
+  }
+  
+  section#cover-wrapper {
+    padding: 240px 20px 0;
+    max-width: 1280px;
+    clear: both;
+    margin: -90px auto 50px !important;
+  }
+  
+  
+  @media only screen and (max-width: 64rem) {
+
+    section#cover {
+        margin-top: 0 !important;
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+  
+    section#cover ul,
+    section#cover-wrapper ul,
+    section#cover ol,
+    section#cover-wrapper ol {
+      text-align: left !important;
+    }
+  }
+  
+
+
+
+
+/* COLORS 
+============================ */
+.primary {
+    color: $primary-color;
+}
+
+.secondary {
+    color: $secondary-color;
+}
+
+
+
+
+
+/* CTA 
+============================ */
+.cta-btn {
+    color: $primary-color;
+    font-size: 1em;
+    padding: 1em 2em;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $white;
+    }
+}
+
+
+
+
+/* TXT
+============================ */
+.summary {
+    p {
+        line-height: 1.8rem;
+    }
+}
+
+
+.txt_w {
+    color: $white !important;
+}
+
+.txt_k {
+    color: $black !important;
+}
+
+
+
+/* COLORS
+============================ */
+.primary-color,
+.primary {
+    color: $primary-color !important;
+}
+
+.secondary-color,
+.secondary {
+    color: $secondary-color !important;
+}
+
+
+a.primary-color, 
+a.primary,
+i.primary-color, 
+i.primary {
+    &:hover{
+        opacity: 0.85;
+    }
+}
+
+
+/* BACKGROUNDS
+============================ */
+.bg_w,
+.bg_white {
+    background-color: $white !important;
+}
+
+.bg_k,
+.bg_black {
+    background-color: $black-alt !important;
+    a{
+        color: $white;
+    }
+}
+
+.bg_clear {
+    background-color: #f8f8f8 !important;
+}
+
+.bg_clear_a {
+    background-color: rgba(0,0,0,0.15) !important;
+}
+
+.bg_primary {
+    background-color: $primary-color !important;
+}
+
+.bg_secondary {
+    background-color: $secondary-color !important;
+}
+
+
+
+/* ARTICLE
+============================ */
+
+article ul,
+article ol {
+    list-style: outside;
+    margin-bottom: 1em;
+
+    li {
+        margin-left: 2em;
+        margin-bottom: 8px;
+        line-height: 125%;
+    }
+}
+
+
+
+
+/* LOGO
+============================ */
+.logo {
+    background: url('../images/logo.svg') no-repeat 0 0 / cover;
+    background-size: auto auto;
+    width: 180px;
+    height: 30px;
+}
+
+
+
+
+
+/* HEADER
+============================ */
+#header {
+    /* position: fixed; */
+    position: relative;
+    background: $white;
+    width: 100%;
+    height: 70px;
+    z-index: 10000;
+
+    .header-in {
+        /* max-width: $max-width;
+        margin: 0 auto;
+        position: relative; */
+        margin: 0 1rem auto;
+        position: relative;
+        max-width: 100%;
+    }
+
+    #main-menu {
+        opacity: 1 !important;
+        ul{
+            li{
+                a{
+                    font-size: 0.85em;
+                }
+            }
+            
+        }
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+        font-size: 0.85rem;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+@media only screen and (max-width: 64rem) {
+    
+    #header {
+        position: relative;
+
+        &+section{
+            padding: 0!important;
+        }
+    }
+
+    body.no-scroll{
+        nav#main-menu{
+            ul{
+                text-align: left!important;
+                -webkit-box-align:start!important;
+
+                margin-top: 2rem!important;
+
+                li{
+                    margin-bottom: 0.8rem!important;;
+                    a{
+                        font-size:1.2rem!important;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+/* MAIN
+============================ */
+
+section.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 64rem) {
+    section.section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+
+.relative{
+    position:relative;
+}
+
+
+@media only screen and (min-width: 75rem) {
+    .fw_position {
+        position: absolute;
+        z-index: 100;
+        margin-top: 100px;
+        left: 0;
+    }  
+}
+
+.block-color {
+    background: #F5F5F5;
+}
+
+
+
+/* FOOTER
+============================ */
+@media only screen and (max-width: 64rem) {
+    section.footer{
+        ul{
+            text-align: center;
+        }
+    }
+}
+
+
+
+/* MISC
+============================ */
+.rounded {
+    @include rounded-corner(6px);
+}
+
+
+.btn-rounded {
+    border-radius: 30px 30px;
+}

@@ -1,0 +1,61 @@
+
+/// Background Images
+%bg-image {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*
+
+Example of how to use it
+
+.image-one {
+    @extend %bg-image;
+    background-image:url(/img/image-one.jpg");
+}
+
+.image-two {
+    @extend %bg-image;
+    background-image:url(/img/image-two.jpg");
+}
+*/
+
+
+/// Buttons
+%btn {
+    padding: 10px;
+    color:#fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    width: 150px;
+    margin: 5px 0;
+    text-align: center;
+    display: block;
+}
+/*
+ -> Next step in Mixins
+*/
+
+
+
+
+/// Clearfix mixin
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+/*
+    Example of how to use it
+    .container-with-floated-children {
+        @extend %clearfix;
+    }
+*/

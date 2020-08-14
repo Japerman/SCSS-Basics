@@ -1,0 +1,23 @@
+body.personal-page{
+    #header{
+        position: relative;
+
+        a{
+            font-size: 0.85rem;   
+            
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    } 
+
+}
+
+
+@media only screen and (max-width: 64rem) {
+    body.personal-page{
+        position: relative;
+    }
+
+    
+}

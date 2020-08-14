@@ -1,0 +1,87 @@
+/* VIDEO BACKGROUND
+============================ */
+.video-background {
+    position: relative;
+    height: 800px;
+
+    .youtube-background {
+        opacity: 0.85;
+    }
+
+    .content {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        text-align: center !important;
+        color: white;
+
+        .inner {
+            text-align: center;
+            max-width: 80vw;
+            margin: 0 auto;
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+                padding:2rem;
+                color: white;
+                text-shadow: 0 2px 4px rgba(255, 255, 255, 0.35);
+            }
+
+        }
+    }
+
+    iframe{
+        border:none;
+    }
+    
+    .video-background-controls{
+        display: block;
+        position: relative!important;
+        width: 100%;
+        z-index: 2;
+        text-align: center!important;
+        color: white;
+
+        button {
+            border: none;
+            background: none;
+            color: white;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+            margin-left: 10px;
+
+            &:hover {
+				opacity: 0.5;
+			}
+
+        }
+        i {
+            font-size: 8rem;
+        }
+    }
+}
+
+.video-background-no-controls{
+    .video-background-controls{
+        display: none!important;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .video-background {
+        height: 55vh;
+
+        .content {
+            position: absolute;
+            top: 20% !important;
+            left: 0 !important;
+        }
+        .video-background-controls{
+            position: absolute;
+            top: 50%!important;
+            left: 0!important;
+        }
+    }
+}

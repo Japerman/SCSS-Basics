@@ -1,0 +1,48 @@
+body.video-landing-page{
+
+    #header{
+        position: absolute;
+        background: transparent;
+        z-index: 100;
+
+        .header-in{  
+            margin:1rem;
+
+            #main-menu{
+                .navbar-brand{
+                    .logo{
+                        background: url("../images/logo_w.svg") no-repeat 0 0;
+                        background-size: auto auto;
+                    }
+                }
+                ul{
+                    display: none;
+                }
+            }
+        }       
+    }
+}
+
+
+@media only screen and (max-width: 64rem) {
+    body.video-landing-page{
+        #header{
+            position: relative;
+
+            .header-in{
+                margin: 1rem 0 0;
+            
+
+                #main-menu{
+                    .navbar-brand{
+                        .logo{
+                            background: url("../images/logo.svg") no-repeat 0 0!important;
+                            background-size: auto auto;
+                        }
+                    }
+                }
+            }
+        }    
+    
+    }
+}

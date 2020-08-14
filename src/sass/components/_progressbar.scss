@@ -1,0 +1,70 @@
+/*
+<div class="meter">
+    <span style="width:50%;"><span class="meter-progress"></span></span>
+</div>
+*/
+
+/* progressbar / meter
+============================ */
+.meter {
+    height: 5px;
+    position: relative;
+    background: lighten(#f8f8f8, 40 * 1%);
+    overflow: hidden;
+
+    span {
+        display: block;
+        height: 100%;
+    }
+
+    .meter-progress {
+        background-color: $primary-color;
+        animation: meter_progressBar 3s ease-in-out;
+        animation-fill-mode: both;
+        -webkit-animation: meter_progressBar 3s ease-in-out;
+        -webkit-animation-fill-mode: both;
+        -moz-animation: meter_progressBar 3s ease-in-out;
+        -moz-animation-fill-mode: both;
+    }
+
+    .meter-progress_w {
+        background-color: $black-alt;
+        animation: meter_progressBar 3s ease-in-out;
+        animation-fill-mode: both;
+        -webkit-animation: meter_progressBar 3s ease-in-out;
+        -webkit-animation-fill-mode: both;
+        -moz-animation: meter_progressBar 3s ease-in-out;
+        -moz-animation-fill-mode: both;
+    }
+
+}
+
+@keyframes meter_progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes meter_progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-moz-keyframes meter_progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

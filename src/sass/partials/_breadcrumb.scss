@@ -1,0 +1,27 @@
+
+ul#breadcrumbs {
+    clear: both;
+    display: block;
+    padding: 16px 0 0;
+    margin: 16px 0 0;
+    overflow: hidden;
+}
+
+ul#breadcrumb li {
+    display: inline-table;
+    padding-right: 8px;
+
+    a:after {
+        font-family: $fontawesome;
+        content: " \2192";
+        font-size: 1em;
+        line-height: 1.4em;
+    }
+
+    a.home {   
+        &:before {
+            font-family: $fontawesome;
+            content: "\f015 ";
+        }
+    }
+}

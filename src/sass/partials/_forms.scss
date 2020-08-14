@@ -1,0 +1,297 @@
+
+form {
+    overflow: hidden;
+}
+
+form input[type="text"],
+form .row-extended {
+    background-image: none;
+    border: 1px solid #e5e9ec;
+    width: 100%;
+    font-size: 1em;
+}
+
+form input[type="submit"],
+form .send {
+    background-color: $primary-color;
+    color: #FFF;
+    border-color: $primary-color;
+    float: right;
+}
+
+form input[type="submit"]:hover,
+form .send:hover {
+    background-color: rgb(0, 0, 0);
+    color: #FFF;
+    border-color: #FFF;
+}
+
+.row-extended {
+    font-size: 1.333em;
+}
+
+form .row-card-full {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+}
+
+input,
+select {
+    background-color: white;
+    border: 1px solid transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 0;
+}
+
+input:focus,
+select:focus,
+input:hover,
+select:hover {
+    border-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
+}
+
+form button {
+    background: $primary-color;
+    color: #FFF;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #181818;
+}
+
+form input,
+form textarea {
+    line-height: 1.5em;
+    font-size: 1em;
+    padding: 16px 20px;
+}
+
+form select option {
+    line-height: 1.5em;
+    font-size: 1em;
+    padding: 16px 20px;
+}
+
+form select {
+    min-height: 60px;
+}
+
+form textarea {
+    height: 220px;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+    padding: 10px;
+}
+
+input[type="checkbox"]:checked, 
+input[type="radio"]:checked{
+    background: rgba(0, 0, 0, .08);
+}
+
+
+input,
+textarea,
+select,
+.simulate-input {
+    background: #FFFFFF;
+    border: 1px solid #e5e9ec;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: $black;
+    display: inline-block;
+    resize: none;
+    padding: 8px;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    white-space: pre-wrap;
+    letter-spacing: normal;
+    font-family: sans-serif;
+}
+
+option {
+    text-indent: 5px;
+    padding: 2px 0 2px;
+    font-family: sans-serif;
+}
+
+input:active,
+textarea:active,
+select:active,
+input:focus,
+textarea:focus,
+select:focus,
+input:hover,
+textarea:hover,
+select:hover,
+.simulate-input:hover {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+select {
+    height: 36px;
+}
+
+.simulate-input {
+    width: 100%;
+    padding: 16px 8px;
+}
+
+input,
+textarea,
+select,
+button,
+.cta-btn {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+button {
+    color: #464a4c;
+    font-family: sans-serif;
+}
+
+form button {
+    border: 1px solid rgba(0, 0, 0, .3);
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);    
+}
+
+
+
+
+
+/* FORM-GROUP
+============================ */
+.form-group {
+    margin-bottom: 20px ;
+    padding: 10px 10px 0 ;
+}
+
+.form-group .form-label {
+    color: #55606e;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+
+.form-group .controls {
+    margin-top: 8px;
+}
+
+.form-group .help {
+    border-bottom: medium none;
+    color: #a7abb1;
+    cursor: text;
+    font-size: 12px;
+}
+
+.form-control {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s ;
+    width: 100%;
+}
+
+
+.form-actions {
+    //background-color: #f2f4f6;
+    background: rgba(0, 0, 0, .08);
+    padding: 20px 30px;
+
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        line-height: 0;
+    }
+
+    &::after {
+        clear: both;
+    }
+
+
+}
+
+.form-group .uneditable-input,
+.form-group textarea,
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="datetime"],
+.form-group input[type="datetime-local"],
+.form-group input[type="date"],
+.form-group input[type="month"],
+.form-group input[type="time"],
+.form-group input[type="week"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="url"],
+.form-group input[type="search"],
+.form-group input[type="tel"],
+.form-group input[type="color"] {
+    color: #666;
+    border-color: rgba(0, 0, 0, .18);
+}
+
+
+
+/* RENDERED-FORM
+============================ */
+.rendered-form{
+    button[type="submit"]{
+        width: 75vw;
+        max-width: 400px;
+        min-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 64rem) {
+    .rendered-form{
+        button[type="submit"]{
+            width: 100%;
+
+        }
+    }
+    .field-submit{
+        width: 100%;
+    }
+
+}
+
+
+ /* HERO FORM
+============================ */
+.hero {
+    form{
+        input{
+            border: none!important;
+        }
+        input:active,
+        textarea:active,
+        select:active,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        input:hover,
+        textarea:hover,
+        select:hover,
+        .simulate-input:hover {
+            border-color: transparent!important;
+            box-shadow: none!important;
+        }
+        
+    }
+}

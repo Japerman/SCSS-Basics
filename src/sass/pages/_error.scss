@@ -1,0 +1,10 @@
+/* ERRORPAGE
+============================ */
+#error_page {
+    padding: 64px 16px;
+
+    h1,
+    p{
+        text-align: center!important;
+    }
+}

@@ -1,0 +1,139 @@
+.carousel-controls {
+    position: relative;
+    text-align: center;
+
+    .control {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+       -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    .prev {
+        left: -1.875rem;
+    }
+
+    .next {
+        right: -1.875rem;
+    }
+}
+
+.testimonial-carousel {
+    &.slick-initialized {
+        display: block;
+        overflow: hidden;
+    }
+
+    .message {
+        width: 85%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .image {
+        width: 100%;
+        text-align: center;
+
+        img {
+            display: inline-block;
+        }
+    }
+}
+    .one-slide {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.1rem;
+        display: inline-block;
+
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .author img,
+            .author .author-info {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .author {
+                margin-top: 10px;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+                }
+
+                .author-info {
+                    text-align: left;
+                    line-height: 1.2;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 0;
+
+                        h4,
+                        h5 {
+                            margin-bottom: 0;
+                            font-weight: lighter;
+                        }
+
+                        h5 {
+                            color: $primary-color;
+                            font-size: 85%;
+                        }
+
+                        &:first-child {
+                            font-size: 14px;
+                            font-size: 0.875rem;
+                        }
+
+                        &:last-child {
+                            font-size: 12px;
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+
+                .author {
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .author-info {
+                        line-height: 1.4;
+                    }
+
+                    li {
+                        &:first-child {
+                            font-size: 16px;
+                            font-size: 1rem;
+                        }
+
+                        &:last-child {
+                            font-size: 14px;
+                            font-size: 0.875rem;
+                        }
+                    }
+
+                }
+
+            }
+
+            align-items: center;
+        }
+
+    }

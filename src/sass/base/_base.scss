@@ -1,0 +1,524 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $primary-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* WRAPPER
+============================ */
+
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+
+
+/* LAYOUT
+============================ */
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+a {
+
+  &:hover,
+  &:active {
+    outline: none;
+    border: none;
+    outline-style: none;
+  }
+
+  &:focus {
+    outline: 1px dotted invert;
+  }
+
+}
+
+
+small {
+  font-size: 85%;
+}
+
+strong,
+th {
+  font-weight: 600;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+sub,
+sup {
+  font-size: 55%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+
+/* IE */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+button {
+  width: auto;
+  overflow: visible;
+  border: 1px solid;
+}
+
+
+
+
+/* TEXT
+============================ */
+
+::-moz-selection {
+  background: #a8d1ff;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #a8d1ff;
+  color: #fff;
+  text-shadow: none;
+}
+
+img::selection {
+  background: none transparent !important;
+}
+
+img::-moz-selection {
+  background: none transparent !important;
+}
+
+.link {
+  -webkit-tap-highlight-color: $blue;
+}
+
+
+ins {
+  background-color: #FF9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #FF9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+// time {}
+
+
+
+
+/* IMAGE
+============================ */
+a img {
+  vertical-align: middle;
+}
+
+img {
+  position: relative;
+  max-width: 100%;
+}
+
+.align-left,
+img[align="left"],
+img[style*="float: left"],
+img[style*="float:left"] {
+  margin: 8px 16px 0px 0px;
+}
+
+.align-right,
+img[align="right"],
+img[style*="float: right"],
+img[style*="float:right"] {
+  margin: 8px 0px 0px 16px;
+}
+
+img[align="center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* PADDINGS
+============================ */
+.pd {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pd_w {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pd_t {
+  padding-top: 2rem !important;
+}
+
+.pd_r {
+  padding-right: 2rem !important;
+}
+
+.pd_b {
+  padding-bottom: 2rem !important;
+}
+
+.pd_l {
+  padding-left: 2rem !important;
+}
+
+.pd_w_xxl {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}
+
+.pd_xxl {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.pd_t_xxl {
+  padding-top: 4rem !important;
+}
+
+.pd_b_xxl {
+  padding-bottom: 4rem !important;
+}
+
+.pd_r_xxl {
+  padding-right: 4rem !important;
+}
+
+.pd_l_xxl {
+  padding-left: 4rem !important;
+}
+
+.no-pd {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no-pd_w {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.no-pd_t {
+  padding-top: 0 !important;
+}
+
+.no-pd_b {
+  padding-bottom: 0 !important;
+}
+
+
+
+@media only screen and (max-width: 60em) {
+
+  .pd {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .pd_w {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .pd_t {
+    padding-top: 1rem !important;
+  }
+  
+  .pd_r {
+    padding-right: 1rem !important;
+  }
+  
+  .pd_b {
+    padding-bottom: 1rem !important;
+  }
+  
+  .pd_l {
+    padding-left: 1rem !important;
+  }
+  
+  .pd_w_xxl {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  .pd_xxl {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .pd_t_xxl {
+    padding-top: 2rem !important;
+  }
+  
+  .pd_b_xxl {
+    padding-bottom: 2rem !important;
+  }
+  
+  .pd_r_xxl {
+    padding-right: 2rem !important;
+  }
+  
+  .pd_l_xxl {
+    padding-left: 2rem !important;
+  }
+  
+ 
+  
+}
+
+
+/* MARGINS
+============================ */
+.mr {
+  margin: 1rem !important;
+}
+
+.mr_t {
+  margin-top: 2rem !important;
+}
+
+.mr_r {
+  margin-right: 2rem !important;
+}
+
+.mr_b {
+  margin-bottom: 2rem !important;
+}
+
+.mr_l {
+  margin-left: 2rem !important;
+}
+
+.no-margin,
+.no-mr {
+  margin: 0 !important;
+}
+
+.no-margin-t,
+.no-mr-t {
+  margin-top: 0 !important;
+}
+
+.no-margin-b,
+.no-mr-b {
+  margin-bottom: 0 !important;
+}
+
+.marginx1 {
+  margin: 1rem !important;
+}
+
+.marginx2 {
+  margin: 2rem !important;
+}
+
+.marginx3 {
+  margin: 4rem !important;
+}
+
+.marginx4 {
+  margin: 8rem !important;
+}
+
+
+@media only screen and (max-width: 60em) {
+  .mr {
+    margin: 0.5rem !important;
+  }
+  
+  .mr_t {
+    margin-top: 1rem !important;
+  }
+  
+  .mr_r {
+    margin-right: 1rem !important;
+  }
+  
+  .mr_b {
+    margin-bottom: 1rem !important;
+  }
+  
+  .mr_l {
+    margin-left: 1rem !important;
+  }
+  
+
+  
+  .marginx1 {
+    margin: 0.5rem !important;
+  }
+  
+  .marginx2 {
+    margin: 1rem !important;
+  }
+  
+  .marginx3 {
+    margin: 1.5rem !important;
+  }
+  
+  .marginx4 {
+    margin: 2rem !important;
+  }
+  
+}
+
+
+
+/* DL
+============================ */
+dl {
+  display: block;
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5em;
+
+  dt {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    padding-right: 10px;
+    vertical-align: top;
+  }
+
+  dd {
+    display: inline-block;
+    width: 49%;
+    text-align: left !important;
+    padding-left: 10px;
+
+    ul {
+      list-style: outside;
+      list-style-type: disc;
+      padding-left: 30px;
+    }
+  }
+}
+
+
+
+
+/* BORDER & LINES
+============================ */
+
+.hr {
+  border-top: 2px solid rgba(0, 0, 0, .20);
+  margin: 10px auto 24px;
+}
+
+
+.border-color {
+  border: 1px solid $primary-color;
+}
+
+.border {
+  border: 1px solid rgb(233, 236, 239);
+}
+
+.border-clear {
+  border: 1px solid rgba(0, 0, 0, .15);
+}
+
+.border-top {
+  border-top: 1px solid rgb(233, 236, 239) !important;
+}
+
+.border-left {
+  border-left: 1px solid rgb(233, 236, 239) !important;
+}
+
+.border-right {
+  border-right: 1px solid rgb(233, 236, 239) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgb(233, 236, 239) !important;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+
+/* MISC
+============================ */
+.w-100{
+  width: 100%;
+}

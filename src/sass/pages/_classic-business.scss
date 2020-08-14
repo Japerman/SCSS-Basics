@@ -1,0 +1,51 @@
+body.classic-business{
+    #header{
+        position: fixed;
+        background: $black;
+        
+        #main-menu{
+            .navbar-brand{
+                .logo{
+                    background: url("../images/logo_w.svg") no-repeat 0 0;
+                    background-size: auto auto;
+                }
+            }
+        }
+        a{
+            color: $white;
+            font-size: 0.85rem;   
+            
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 64rem) {
+    body.classic-business{
+        #header{
+            position: relative;
+        }
+        
+        .cover-container{
+            .cover-content{
+                padding-top: 2rem;
+            }
+        }
+    }
+
+    body.no-scroll{
+        #main-menu{
+            .navbar-brand{
+                .logo{
+                    background: url("../images/logo_k.svg") no-repeat 0 0 !important;
+                    background-size: auto auto!important;
+                }
+            }
+        }
+    }
+}

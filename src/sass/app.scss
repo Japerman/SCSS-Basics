@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/helpers';
+
+
+// 4. Grid
+@import
+  'grid/grid-variables',
+  'grid/grid-mixins',
+  'grid/visibility-mixins',
+  'grid/grid',
+  'grid/visibility';
+
+
+// 5. Partials / Layout-related sections
+@import
+  'partials/header',
+  'partials/footer',
+  'partials/forms',
+  'partials/tables',
+  'partials/navigation',
+  'partials/sidebar',
+  'partials/breadcrumb';
+
+// 6. Components
+@import
+  'components/google',
+  'components/text',  
+  'components/images',
+  'components/button',
+  'components/links',
+  'components/carousel',
+  'components/dropdown',
+  'components/slides',
+  'components/scrollbars',
+  'components/cookies',
+  'components/iframe',
+  'components/loader',
+  'components/message',
+  'components/chat',
+  'components/card',
+  'components/blockquote',
+  'components/portfolio',
+  'components/testimonials',
+  'components/video',
+  'components/tile',
+  'components/fancybox',
+  'components/adv_images',
+  'components/progressbar',
+  'components/rslides',
+  'components/isotope',
+  'components/accordion';
+
+
+// 7. Page-specific styles
+@import
+  'pages/home',
+  'pages/contact',
+  'pages/single',
+  'pages/thankyou',
+  'pages/error',
+  'pages/agency',
+  'pages/app-showcase',
+  'pages/business',
+  'pages/classic-business',
+  'pages/personal-page',
+  'pages/classic-studio',
+  'pages/product-showcase',
+  'pages/vcard',
+  'pages/video-landing-page',
+  'pages/services-boxes';
+
+
+// 8. Themes
+@import
+  'themes/default';
+
+
+
+// 9. EXTRA  Vendors 
+@import
+'vendors/animate';
+
+
+
+// 10. Shame File
+@import
+  'shame';

@@ -1,0 +1,124 @@
+/* BASE URL - REMOTE OR LOCAL
+============================ */
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+
+
+/* FONTS
+============================ */
+$primary-font: 'UtopiaStd-Bold','Georgia', 'Times', serif !default;
+$secondary-font: 'Montserrat-Regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+$fontawesome: 'fontawesome';
+
+
+
+/* BASIC COLORS
+============================ */
+$white: rgb(255, 255, 255) !default;
+$black: rgb(0, 0, 0) !default;
+$blue: rgb(0, 0, 255) !default;
+$red: rgb(255, 69, 0) !default;
+$green: rgb(31, 215, 108) !default;
+$orange: rgb(255, 166, 0) !default; 
+$grey: rgb(243, 243, 243) !default; 
+$turquoise: rgb(127, 255, 212) !default;
+
+
+/* LAYOUT COLOURS
+============================ */
+$text-color: rgb(34, 34, 34) !default;
+$brand-color: rgb(229, 0, 80) !default;
+
+
+/* 10 Primary Colors
+============================ */
+$primary-color: rgb(28, 70, 242) !default;
+$secondary-color: rgb(21, 52, 180)!default;
+$tertiary-color: rgb(0 ,0, 0) !default;
+$quaternary-color: rgb(0 ,0, 0) !default;
+$quinary-color: rgb(0 ,0, 0) !default;
+$senary-color: rgb(0 ,0, 0) !default;
+$septenary-color: rgb(0 ,0, 0) !default;
+$octonary-color: rgb(0 ,0, 0) !default;
+$nonary-color: rgb(0 ,0, 0) !default;
+$denary-color: rgb(0 ,0, 0) !default;
+
+
+/* GrayScale Colors
+============================ */
+// Grayscale Function
+@function gray($level) {
+  @return lighten(black, $level * 1%);
+}
+
+$c-white: gray(100)!default;
+$c-gray-98: gray(98)!default;
+$c-gray-95: gray(95)!default;
+$c-gray-90: gray(90)!default;
+$c-gray-85: gray(85)!default;
+$c-gray-80: gray(80)!default;
+$c-gray-75: gray(75)!default;
+$c-gray-70: gray(70)!default;
+$c-gray-60: gray(60)!default;
+$c-gray-50: gray(50)!default;
+$c-gray-45: gray(45)!default;
+$c-gray-40: gray(40)!default;
+$c-gray-30: gray(30)!default;
+$c-gray-20: gray(20)!default;
+$c-gray-15: gray(15)!default;
+$c-gray-10: gray(10)!default;
+$c-black: gray(0)!default;
+
+$c-black-alt: rgb(41, 41, 41)!default;
+$black-alt: rgb(41, 41, 41)!default;
+
+
+
+/* LAYOUT
+============================ */
+$max-width: 1280px !default;
+
+
+
+/* BREAKPOINTS
+============================ */
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'xs': 40rem,
+  'sm': 64rem,
+  'md': 90rem,
+  'lg': 120rem,
+) !default;
+
+
+/// Responsive breakpoint manager
+/// @link https://sass-guidelin.es/#architecture
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

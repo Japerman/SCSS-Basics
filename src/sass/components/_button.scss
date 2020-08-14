@@ -1,0 +1,306 @@
+// Button-specific variables
+$button-color: $secondary-color;
+
+
+/* BUTTON
+============================================= */
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+
+
+    &.learn-more {
+      width: 12rem;
+      height: auto;
+      .circle {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: $primary-color;
+        @include rounded-corner(1.625rem);
+        .icon {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: $white;
+          &.arrow {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+
+      .button-text {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: $primary-color;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+
+    &:hover {
+      
+      .circle {
+        width: 100%;
+        .icon {
+          &.arrow {
+          background: $white;
+          transform: translate(1rem, 0);
+          }
+        }
+      }
+      .button-text {
+        color: $white;
+      }
+
+    }
+  }
+
+  /*
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">Learn More</span>
+  </button>
+  */
+  
+
+
+
+
+/* CLASSES
+============================================= */
+
+
+/// GLOBAL
+.btn {
+    display: inline-block;
+    border: 1px solid $primary-color;
+    color: #fff;
+    text-decoration: none;
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    @include rounded-corner(8px);
+    text-align: center;
+    position: relative;
+    outline: none;
+    transition: background-color .1s ease;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+
+    &::after {
+        transition: background-color .2s ease;
+        position: absolute;
+        content: '';
+        top: 0;
+        width: 100%;
+        background-color: darken($primary-color, 50%);
+        opacity: .18;
+        left: 0;
+    }
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+        border-width: 1px;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 5%);
+
+        &::after {
+            opacity: .22;
+        }
+
+    }
+
+    &:active {
+        background-color: darken($primary-color, 5%);
+
+        &::after {
+            opacity: .32;
+        }
+
+    }
+
+}
+
+
+/// COLORS
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+   
+}
+
+.btn-default {
+    background: $secondary-color none repeat scroll 0 0;
+    border: 1px solid $secondary-color;
+    color: $white;
+}
+
+.btn-success {
+    background: $green none repeat scroll 0 0;
+    border: 1px solid $green;
+    color: $white;
+}
+
+.btn-danger {
+    background: $red none repeat scroll 0 0;
+    border: 1px solid $red;
+    color: $white;
+}
+
+.btn-primary {
+    background: $primary-color none repeat scroll 0 0;
+    border: 1px solid $primary-color;
+    color: $white;
+}
+
+.btn-white {
+    background: $white none repeat scroll 0 0;
+    border: 1px solid $white;
+    color: $primary-color;
+}
+
+.btn-black {
+    background: $black none repeat scroll 0 0 !important;
+    border: 1px solid $black !important;
+    color: $white;
+
+    &:focus,
+    &:hover{
+      opacity: .8!important;
+    }
+}
+
+
+
+/// GHOSTS
+.btn-ghost {
+    background: transparent;
+    border: 1px solid $white !important;
+    color: $white;
+
+    &::after{
+        background: none!important;
+    }
+}
+
+.btn-ghost-primary {
+    background: transparent;
+    border: 1px solid $primary-color !important;
+    color: $primary-color;
+
+    &::after{
+        background: none!important;
+    }
+}
+
+
+
+/// FLOAT
+
+
+
+/// ROUNDED
+.btn-rounded{
+    @include rounded-corner(5rem);
+
+    &::after{
+        background: none!important;
+    }
+}
+
+/// TEXT
+.btn-text{
+    background: transparent!important;
+    border: none!important;
+}
+
+
+/// SIZES
+.btn-lg,
+.btn-large {
+    padding: 1.5rem 5rem;
+}
+
+
+
+
+
+/* 
+AUXILIARES
+============================================= */
+
+.rendered-form{
+  .btn{
+    padding: 1rem 2rem!important;
+  }
+} 
+
+
+
+
+
+/* RESPONSIVE
+============================================= */ 
+@media screen and (max-width: 50em) {
+  [class^="btn-"], [class^="btn"]{
+    width: 100%;
+    display: block;
+  }
+
+}

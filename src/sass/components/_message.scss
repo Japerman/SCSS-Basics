@@ -1,0 +1,180 @@
+
+
+/* MSG
+============================ */
+
+.msgalert,
+.msg-alert {
+    background: #e74c3c none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    font-size: 1.125em;
+    padding: 16px;
+    text-align: left;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.msgalert::before,
+.msg-alert::before {
+    content: "";
+    font-family: $fontawesome;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.msgwarning,
+.msg-warning {
+    background: #ffe8aa none repeat scroll 0 0;
+    color: #595959;
+    display: block;
+    font-size: 1.125em;
+    margin: 24px 0;
+    padding: 16px;
+    text-align: left;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+th .msgwarning,
+th .msg-warning,
+td .msgwarning,
+td .msg-warning {
+    margin: 8px 0;
+}
+
+.msgwarning h3,
+.msg-warning h3 {
+    display: inline-table;
+    margin: 24px 0 !important;
+    padding-left: 10px;
+    vertical-align: middle !important;
+}
+
+.msgwarning::before,
+.msg-warning::before {
+    content: "";
+    font-family: $fontawesome;
+    font-size: 1.5em;
+    vertical-align: middle !important;
+}
+
+.msgwarning h4,
+.msg-warning h4,
+.msgwarning ul,
+.msg-warning ul,
+.msgwarning p,
+.msg-warning p {
+    color: #626262;
+    font-size: 1em;
+    font-weight: 400;
+    padding-left: 40px;
+}
+
+.msgwarning ul,
+.msg-warning ul {
+    margin-left: 16px;
+}
+
+.msgwarning ul li,
+.msg-warning ul li {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    display: table-cell;
+    line-height: 1.4em;
+    list-style: outside none disc;
+    padding: 8px 16px;
+    vertical-align: top;
+}
+
+.msgwarning ul li:last-child,
+.msg-warning ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.msgok,
+.msg-ok {
+    background: #2ecc71 none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    font-size: 1.125em;
+    padding: 16px;
+    text-align: left;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.msgok::before,
+.msg-ok::before {
+    content: "";
+    font-family: $fontawesome;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.msgok.msgok-clear,
+.msg-ok.msg-ok-clear {
+    background: transparent none repeat scroll 0 0 !important;
+    color: #2ecc71 !important;
+    font-weight: 300 !important;
+    padding: 8px 12px;
+}
+
+.msgtip,
+.msg-tip {
+    background: #3a9bdc none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    font-size: 1.125em;
+    padding: 16px;
+    text-align: left;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.msgtip::before,
+.msg-tip::before {
+    content: "";
+    font-family: $fontawesome;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.msgabsolut {
+    padding: 24px;
+    position: absolute;
+    right: 1vw;
+    top: 0;
+}
+
+.msgfixed {
+    padding: 24px;
+    position: fixed;
+    right: 1vw;
+    top: 9vh;
+    z-index: 999999999999;
+}
+
+
+
+.msg-dialog {
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+}
+
+.msg-dialog .msg-content {
+    z-index: 99999999;
+    position: fixed;
+    width: 400px;
+    padding: 30px 20px;
+    left: 50%;
+    top: 40%;
+    margin-left: -200px;
+}
+
+.msg-dialog .msg-content .msg-text {
+    margin-bottom: 30px;
+}
+
+.msg-dialog .msg-actions {
+    text-align: right;
+}

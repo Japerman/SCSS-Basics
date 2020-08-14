@@ -1,0 +1,24 @@
+body.agency{
+
+    #header{
+        position: relative;
+
+        .header-in{
+            margin: 0 auto;
+            position: relative;
+            max-width: 80%;
+        }
+
+       
+    }
+
+}
+
+
+@media only screen and (max-width: 64rem) {
+    body.agency{
+
+        
+    
+    }
+}

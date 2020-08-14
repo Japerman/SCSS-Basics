@@ -1,0 +1,124 @@
+/* CTA
+============================ */
+.cta-btn {
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 28px;
+}
+
+.cta-btn-full {
+    width: 100%;
+}
+
+.cta-btn-rnd {
+    border-radius: 30px;
+}
+
+.cta-btn-xxl {
+    padding: 20px 40px !important;
+}
+
+a.cta-btn {
+    display: inline-block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* @media only screen and (max-width: 800px) {
+    .cta-btn.cta-btn-primary,
+    .cta-btn.cta-btn-complementary,
+    .cta-btn-w {
+        width: 100%;
+    }
+} */
+
+
+
+
+/* UNDERLINE
+============================ */
+.underline-left {
+    a{
+        width: calc(100%);
+        background-image: linear-gradient(transparent calc(100% - 2px), $primary-color 2px);
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 250ms;
+        text-decoration: none;
+        padding-bottom: 5px;
+    
+        &:hover {
+            background-size: 100% 100%;
+        }
+    }
+    
+}
+
+
+
+
+/* Link effect: Curtain
+============================ */
+
+a.link-curtain {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    vertical-align: bottom;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        pointer-events: none;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: transform 0.3s;
+    }
+
+    &::after {
+        /*	z-index: -1;*/
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    &::before {
+        border-top: 2px solid $primary-color!important;
+        background: transparent;
+        -webkit-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+        -webkit-transform: translateY(calc(100% - 3px));
+        transform: translateY(calc(100% - 3px));
+    }
+
+    &:hover,
+    &:focus {
+        &::before {
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+
+        &::before,
+        &::after {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        &::after {
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+        }
+    }
+}

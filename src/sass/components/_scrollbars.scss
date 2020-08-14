@@ -1,0 +1,72 @@
+
+/*! jQuery Scrollbars | License: https://github.com/nathggns/Scrollbars/blob/master/LICENSE */
+
+.scrollElement.scrollRoot {
+    overflow: hidden;
+    &:focus {
+        outline: none;
+    }
+}
+
+.rootWrap {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.scrollElement.axisInUseX .rootWrap,
+.scrollElement.axisInUseY .rootWrap {
+    overflow-y: hidden;
+}
+
+.scrollElement.dragConX,
+.scrollElement.dragConY {
+    width: 10px;
+    top: 0;
+    height: 100%;
+    right: 0;
+}
+
+.scrollElement.dragCon {
+    position: absolute;
+    background: #ccc;
+}
+
+.scrollElement.dragCon:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
+.scrollElement.drag {
+    background: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid transparent;    
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, .15);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.18);
+    }
+}
+
+
+.scrollElement.dragX,
+.scrollElement.dragY {
+    min-height: 5%;
+    max-height: 95%;
+    width: 100%;
+}
+
+.scrollElement.dragConInner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.scrollElement.contentWrap {
+    float: left;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+}
